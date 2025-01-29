@@ -1,0 +1,327 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e; /* Dark background */
+    color: #ffffff; /* Light text */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #2d2d2d; /* Slightly lighter dark container */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+}
+
+/* Banner Section */
+.banner {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8); /* Darken banner for better contrast */
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e; /* Dark background */
+    color: #ffffff; /* Light text */
+    line-height: 1.6;
+    position: relative; /* Ensure the body is positioned relative for pseudo-elements */
+}
+
+/* Add GIF Background to the Entire Page */
+body::before {
+    content: '';
+    position: fixed; /* Fixed position to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/background/profile-background.gif'); /* Add your GIF here */
+    background-size: cover; /* Ensure the GIF covers the entire background */
+    background-position: center; /* Center the GIF */
+    z-index: -1; /* Place it behind all content */
+    opacity: 0.5; /* Adjust opacity to make it less distracting */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(45, 45, 45, 0.8); /* Slightly lighter dark container with transparency */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    position: relative; /* Ensure the container is above the GIF background */
+    z-index: 1; /* Place it above the GIF background */
+}
+
+/* Remove GIF Background from Profile Section */
+header {
+    position: relative;
+    text-align: center;
+    margin-top: 10px; /* Overlap banner */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent background for better contrast */
+    border-radius: 12px;
+    overflow: hidden; /* Ensure the content doesn't overflow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #2d2d2d; /* Match container background */
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 15px 0 5px;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #b9bbbe; /* Light gray for subtlety */
+}
+
+/* Description Section */
+.description {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #b9bbbe;
+}
+
+/* Image Panel Section */
+.image-panel {
+    margin-top: 30px;
+    position: relative;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.2); /* Black with 50% transparency */; /* Darker background for contrast */
+}
+
+.scroll-container img {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scroll-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.scroll-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.scroll-buttons button {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+    pointer-events: all;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-buttons button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* About Section */
+.about {
+    margin-top: 30px;
+}
+
+.about h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #ffffff;
+    border-bottom: 2px solid #7289da; /* Discord-like blue accent */
+    padding-bottom: 5px;
+}
+
+.about p {
+    font-size: 1.1em;
+    color: #b9bbbe;
+}
+
+/* Skills Section */
+.skills {
+    margin-top: 30px;
+}
+
+.skills h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #ffffff;
+    border-bottom: 2px solid #7289da;
+    padding-bottom: 5px;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li {
+    font-size: 1.1em;
+    color: #b9bbbe;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #3a3a3a;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.skills li:hover {
+    background-color: #4a4a4a;
+}
+
+/* Contact Section */
+.contact {
+    margin-top: 30px;
+}
+
+.contact h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #ffffff;
+    border-bottom: 2px solid #7289da;
+    padding-bottom: 5px;
+}
+
+.contact p {
+    font-size: 1.1em;
+    color: #b9bbbe;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #7289da; /* Discord-like blue */
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #5a6daa; /* Slightly darker blue on hover */
+    text-decoration: underline;
+}
+
+/* Skills Section with Progress Bars */
+.skills {
+    margin-top: 30px;
+}
+
+.skills h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #ffffff;
+    border-bottom: 2px solid #7289da;
+    padding-bottom: 5px;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill span {
+    font-size: 1.1em;
+    color: #b9bbbe;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #3a3a3a; /* Gray background */
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.skill span:last-child {
+    font-size: 0.9em;
+    color: #7289da; /* Percentage color */
+    text-align: right;
+    margin-top: 5px;
+}
+
+/* Dark Theme for Program Panels */
+.program-panel {
+    color: #000000;
+    display: none;
+    padding: 10px;
+    border: 1px solid #5a6daa; /* Light border */
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #5a6daa; /* White background */
+    color: #ffffff; /* White text */
+}
+
+.program-panel img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.program-panel a {
+    color: #7289da; /* Discord-like blue for links */
+    text-decoration: none;
+}
+
+.program-panel a:hover {
+    text-decoration: underline;
+}

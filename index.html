@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soypiseth Meas - Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional CSS for Programs Section */
+        .programs {
+            margin-top: 20px;
+        }
+
+        .program-button {
+            background-color: rgba(90, 109, 168, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            margin: 5px 0;
+            width: auto;
+            text-align: left;
+            font-size: 16px;
+            white-space: nowrap; /* Prevents text wrapping */
+        }
+
+        .program-button:hover {
+            background-color: #5a6da8;
+        }
+
+        .program-panel {
+            display: none;
+            padding: 10px;
+            border: 1px solid rgb(90, 109, 168);
+            border-radius: 5px;
+            margin-top: 5px;
+            background-color: rgba(0, 0, 0, 0.2); /* Black with 50% transparency */
+        }
+
+        .program-panel img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .program-panel a {
+            color: #7289da;
+            text-decoration: none;
+        }
+
+        .program-panel a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Banner Section -->
+        <div class="banner">
+            <img src="images\banner\banner.gif" alt="Banner" class="banner-img">
+        </div>
+
+        <!-- Profile Section -->
+        <header>
+            <img src="images\profile\profile.jpg" alt="Soypiseth Meas" class="profile-img">
+            <h1>Soypiseth Meas</h1>
+            <p>Bachelor's Degree in [Information Technology] from RUPP</p>
+        </header>
+
+        <!-- Main Content -->
+        <section class="description">
+            <p>Hello! I'm Soypiseth Meas, a recent graduate with a Bachelor's degree from the Royal University of Phnom Penh (RUPP). I have a strong passion for technology, particularly in System Administration, Artificial Intelligence, Software Development, and Hardware Engineering.</p>
+        </section>
+
+        <!-- Image Panel Section -->
+        <section class="image-panel">
+            <div class="scroll-container">
+                <img src="images\prove\image1.png" alt="Image 1">
+                <img src="images\prove\image2.png" alt="Image 2">
+                <img src="images\prove\image3.png" alt="Image 3">
+            </div>
+            <div class="scroll-buttons">
+                <button id="scroll-left">&larr;</button>
+                <button id="scroll-right">&rarr;</button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <h2>About Me</h2>
+            <p>I am passionate about leveraging technology to solve real-world problems. My expertise includes System Administration, AI, Software Development, and Hardware Engineering. I am always eager to learn and explore new technologies.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skill">
+                <span>System Administration</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 89%; background-color: #7289da;"></div>
+                </div>
+                <span>89%</span>
+            </div>
+            <div class="skill">
+                <span>Artificial Intelligence</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 34%; background-color: #7289da;"></div>
+                </div>
+                <span>34%</span>
+            </div>
+            <div class="skill">
+                <span>Software Development</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 65%; background-color: #7289da;"></div>
+                </div>
+                <span>65%</span>
+            </div>
+            <div class="skill">
+                <span>Hardware Engineering</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 98%; background-color: #7289da;"></div>
+                </div>
+                <span>98%</span>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section class="programs">
+            <h2>Programs</h2>
+            <!-- Program 1: Yukio Discord's Bot -->
+            <button class="program-button" onclick="togglePanel('yukio')">Yukio Discord's Bot</button>
+            <div id="yukio" class="program-panel">
+                <img src="images\prove\image1.png" alt="Yukio Discord's Bot" width="128" height="128">
+                <p><strong>Description:</strong> Yukio is an all-in-one Discord bot designed to take your server to the next level! Packed with tons of exciting features, Yukio is perfect for both managing your community and keeping members engaged.</p>
+                <p><strong>Link:</strong> <a href="https://discord.com/oauth2/authorize?client_id=1240339329159659643" target="_blank">Invite Yukio</a></p>
+            </div>
+
+            <!-- Program 2: Babe Discord's Bot -->
+            <button class="program-button" onclick="togglePanel('babe')">Babe Discord's Bot</button>
+            <div id="babe" class="program-panel">
+                <img src="images\prove\image2.png" alt="Babe Discord's Bot" width="128" height="128">
+                <p><strong>Description:</strong> Babe is a sleek and elegant Discord bot designed to elevate your server's aesthetics and enhance its functionality. With a focus on smooth performance and beautiful design, Babe ensures every interaction feels seamless and visually appealing.</p>
+                <p><strong>Link:</strong> <a href="https://discord.com/oauth2/authorize?client_id=1298938980561063967" target="_blank">Invite Babe</a></p>
+            </div>
+
+            <!-- Program 3: Azumi Discord's Bot -->
+            <button class="program-button" onclick="togglePanel('azumi')">Azumi Discord's Bot</button>
+            <div id="azumi" class="program-panel">
+                <img src="images\prove\image3.png" alt="Azumi Discord's Bot" width="128" height="128">
+                <p><strong>Description:</strong> Azumi is the ultimate bundle of cuteness and humor for your Discord server! Designed to bring joy and laughter, Azumi’s adorable personality and funny features will instantly charm your community.</p>
+                <p><strong>Link:</strong> <a href="https://discord.com/oauth2/authorize?client_id=1315105599650009128" target="_blank">Invite Azumi</a></p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me through my social media profiles:</p>
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/share/1HBvczoSck/?mibextid=wwXIfr" target="_blank">Facebook: Piseth Meas</a></li>
+                <li><a href="https://youtube.com/@ariesseth983?si=5aaeZTCVOb3095x9" target="_blank">YouTube: Aries Seth</a></li>
+                <li><a href="https://discord.com/login" target="_blank">Discord: nori.rising</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        // Scroll functionality for the image panel
+        const scrollContainer = document.querySelector('.scroll-container');
+        const scrollLeftButton = document.getElementById('scroll-left');
+        const scrollRightButton = document.getElementById('scroll-right');
+
+        scrollLeftButton.addEventListener('click', () => {
+            scrollContainer.scrollBy({ left: -200, behavior: 'smooth' }); // Scroll left
+        });
+
+        scrollRightButton.addEventListener('click', () => {
+            scrollContainer.scrollBy({ left: 200, behavior: 'smooth' }); // Scroll right
+        });
+
+        // Function to toggle program panels
+        function togglePanel(programId) {
+            const panel = document.getElementById(programId);
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
